@@ -22,19 +22,37 @@ const imgArr = [
 ];
 
 export default function Card({ id, name, race }) {
+	const handelbarRename = () => {
+		console.log("rename");
+	};
+	const handelbarDelete = () => {
+		console.log("rename");
+	};
 	return (
-		<div className={style.cardWrapper}>
-			<p className={style.name}>
-				Name: {name} | Race: {race}
-			</p>
-			<img className={style.img} src={imgArr[id - 1].img} />
-			<div className={style.buttonWrapper}>
-				<input
-					className={style.btn}
-					type="button"
-					value="Изменить имя"
+		<div className={style.wrapper}>
+			<div className={style.cardWrapper}>
+				<p className={style.name}>
+					Name: {name} | Race: {race}
+				</p>
+				<img
+					alt={name}
+					className={style.img}
+					src={imgArr[id - 1].img}
 				/>
-				<input className={style.btn} type="button" value="Удалить" />
+				<div className={style.buttonWrapper}>
+					<input
+						className={style.btn}
+						type="button"
+						value="Rename"
+						onClick={handelbarRename}
+					/>
+					<input
+						className={style.btn}
+						type="button"
+						value="Delete"
+						onClick={handelbarDelete}
+					/>
+				</div>
 			</div>
 		</div>
 	);

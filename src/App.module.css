@@ -5,11 +5,12 @@
 }
 
 .columItem {
-	border: 1px solid black;
+	border: 2px solid black;
 	width: 100%;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
+	margin: 2px;
 }
 
 .columName {
@@ -18,5 +19,22 @@
 }
 
 .addBtn {
-	display: block;
+	background-color: aliceblue;
+	font-family: "Fraunces", serif;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	border-left: 0;
+	border-right: 0;
+	padding: 2px 7px;
+}
+
+.addBtn:hover {
+	background-color: rgb(24, 72, 88);
+	color: #fff;
+}
+
+@media (max-width: 910px) {
+	.columWrapper {
+		flex-wrap: wrap;
+	}
 }

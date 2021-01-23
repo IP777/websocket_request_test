@@ -1,29 +1,9 @@
-import useEffect from "react";
+import { useEffect } from "react";
 import style from "./App.module.css";
 import Card from "./component/Card";
-
-const fakeDB = [
-	{
-		id: 1,
-		name: "Frodo",
-		race: "Hobbit",
-	},
-	{
-		id: 2,
-		name: "Aragorn",
-		race: "Human",
-	},
-	{
-		id: 3,
-		name: "Gimli",
-		race: "Dworf",
-	},
-	{
-		id: 4,
-		name: "Legolas",
-		race: "Elf",
-	},
-];
+import { connect } from "react-redux";
+import { getDB } from "./redux/appOperation";
+import { getData } from "./redux/appReducer";
 
 const colum = [
 	{ id: 1, race: "Hobbit" },
@@ -32,7 +12,11 @@ const colum = [
 	{ id: 4, race: "Elf" },
 ];
 
-function App() {
+function App({ data, getDataBase }) {
+	useEffect(() => {
+		getDataBase({ cmd: "get_list" });
+	}, []);
+
 	const handelbarOnclick = () => {
 		console.log("Add player");
 	};
@@ -49,7 +33,7 @@ function App() {
 							className={style.addBtn}
 							onClick={handelbarOnclick}
 						/>
-						{fakeDB
+						{data
 							.filter((person) => person.race === colum.race)
 							.map((iter) => (
 								<Card
@@ -66,4 +50,12 @@ function App() {
 	);
 }
 
-export default App;
+//--------------------------------------------------------------
+const mapStateToProps = (state) => ({
+	data: getData(state),
+});
+const mapDispatchToProps = {
+	getDataBase: getDB,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
