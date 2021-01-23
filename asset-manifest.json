@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/IP777/websocket_request_test/static/css/main.95637f01.chunk.css",
+    "main.js": "/IP777/websocket_request_test/static/js/main.7cd2e793.chunk.js",
+    "main.js.map": "/IP777/websocket_request_test/static/js/main.7cd2e793.chunk.js.map",
+    "runtime-main.js": "/IP777/websocket_request_test/static/js/runtime-main.beda5ed7.js",
+    "runtime-main.js.map": "/IP777/websocket_request_test/static/js/runtime-main.beda5ed7.js.map",
+    "static/js/2.eb825bea.chunk.js": "/IP777/websocket_request_test/static/js/2.eb825bea.chunk.js",
+    "static/js/2.eb825bea.chunk.js.map": "/IP777/websocket_request_test/static/js/2.eb825bea.chunk.js.map",
+    "index.html": "/IP777/websocket_request_test/index.html",
+    "static/css/main.95637f01.chunk.css.map": "/IP777/websocket_request_test/static/css/main.95637f01.chunk.css.map",
+    "static/js/2.eb825bea.chunk.js.LICENSE.txt": "/IP777/websocket_request_test/static/js/2.eb825bea.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.beda5ed7.js",
+    "static/js/2.eb825bea.chunk.js",
+    "static/css/main.95637f01.chunk.css",
+    "static/js/main.7cd2e793.chunk.js"
+  ]
+}
