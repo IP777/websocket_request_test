@@ -2,7 +2,7 @@
 	"name": "websocket_request_test",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://github.com/IP777/websocket_request_test/",
+	"homepage": "https://IP777/websocket_request_test/",
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.11.9",
 		"@testing-library/react": "^11.2.3",
